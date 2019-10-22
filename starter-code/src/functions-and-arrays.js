@@ -1,17 +1,71 @@
 // Find the maximum
+//Define a function `maxOfTwoNumbers` that takes two numbers as arguments and returns the largest.
+
+function maxOfTwoNumbers(a, b) {
+  if (a > b) {
+    console.log(`The largest number is ${a}`);
+  } else if (a < b) {
+    console.log(`The largest number is ${b}`);
+  } else {
+    console.log("Ops... They are equal!");
+  }
+}
+
 
 // Finding Longest Word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+
+function findLongestWord(arr) {
+  if (arr === 0) {
+    return null;
+  }
+  let word = "";
+  for (let i = 0 ; i < arr.length ; i++) {
+    if (word.length < arr[i].length) {
+      word = arr[i];
+    }
+  }
+  return word;
+}
+
+console.log(findLongestWord(words));
+
 
 // Calculating a Sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+function sum(arr) {
+  if (arr === 0) {
+    return null;
+  }
+  let number = 0;
+  for (let i = 0 ; i < arr.length ; i++) {
+      number = number + arr[i];
+  }
+  return number;
+}
+console.log(sum(numbers));
+
 // Calculate the Average
 
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+function sum(arr) {
+  if (arr === 0) {
+    return null;
+  }
+  let number = 0;
+  for (let i = 0 ; i < arr.length ; i++) {
+      number = number + arr[i];
+  }
+  return number / numbersAvg.length;
+}
+console.log(sum(numbersAvg));
+
 // Array of Strings
+// Declare a function named `averageWordLength` that receives as a single argument 
+//an array of words and returns the average length of the words:
 const wordsArr = [
   'seat',
   'correspond',
@@ -25,7 +79,22 @@ const wordsArr = [
   'palace'
 ];
 
+function averageWordLength(arr) {
+  let number = 0;
+  for (i = 0; i < arr.length; i++) {
+    number = number + arr[i].length;
+  }
+  return number / arr.length
+}
+console.log(averageWordLength(wordsArr));
+
 // Unique Arrays
+//Take the following array, remove the duplicates, and return a new array. 
+//You're more than likely going to want to check out the [`indexOf`]
+//(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 
+//Array method.
+//Do this in the form of a function `uniquifyArray` that receives an array of words as a argument.
+
 const wordsUnique = [
   'crab',
   'poison',
@@ -39,6 +108,7 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+
 
 // Finding Elements
 const wordsFind = [
